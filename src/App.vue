@@ -14,19 +14,23 @@
         <Description :title='title2'>
           <div class="skill">
             <p class="left">
-              1、阅读过Vue源码，并写过相应的源码分析文章，并用vue做过一些项目 
+              1、深入理解Vue框架原理，理解依赖收集，响应式原理，Virtual-DOM等原理。曾经看过Vue源码，并写过几篇博客。对Vue全家桶也有一定的理解，例如Vue-Router,Vuex。
               <br>     
-              2、英语六级水平，掘金翻译计划成员，无障碍阅读英语文献.
+              2、英语六级水平，掘金翻译计划成员，为掘金翻译过多篇有关前端的文献，同时也关注外国新技术，浏览stackoverflow等网站。
               <br>
-              3、专注于javaScript原生技术，相信原生是一切的基础。对新标准ES6都有一定的了解。
+              3、专注于javaScript原生技术，相信原生是一切的基础。熟悉ES6新增语法，同时也密切关注ES7。
               <br>
-              4、对HTML5和CSS3有一定的了解 
+              4、对HTML5和CSS3有一定的了解 ，并尝试将新特性加入项目中。
               <br>
-              5、了解nodeJS，并且能够独立完成简单的项目 
+              5、熟悉常用前端工具，抓包工具Fridder,前端构建工具webpack,项目管理工具git等
               <br>
-              6、了解前端构建工具webpack,项目管理工具git 
+              6、掘金专栏作者，有3k的关注量，3万的阅读量，热爱分享，热爱技术
               <br>
-              7、掘金专栏作者，有3k的关注量
+              7、了解后端Node.js，并使用过其开发框架express,用其做简单的项目
+              <br>
+              8、基础知识扎实，对计算机网络有关的东西也有过一定的研究
+              <br>
+              9、严格要求代码质量，并有测试框架Mocha的使用经验
             </p>
             <div class="right">
               <div class="canvas-container">
@@ -43,20 +47,34 @@
            <span class="date">2014.9 ~ 2018.6</span>
          </div>
         </Description>
+        <Description :title='title5'>
+          <div class="education">
+            <span class="school">东北石油大学</span>
+            <span class="major">学生会</span>
+            <span class="date">2015.6 - 2017.6</span>
+          </div>
+          <p class="content">
+            在学生会学习部中，担任部长，负责督促同学学习，举办提高大学生素质有关的比赛。架起老师与学生沟通的桥梁。
+          </p>
+          <div class="education">
+            <span class="school">东北石油大学</span>
+            <span class="major">辩论队</span>
+            <span class="date">2015.6 - 2017.6</span>
+          </div>
+          <p class="content">
+            辩论是消遣的一种方式，在辩论队中担任辩手的职责，共同和大家讨论真理，切磋思想。
+          </p>
+        </Description>
         <Description :title='title4'>
           <p class="content">
-            对待工作认真负责，吃苦耐劳。追求新技术，追求自我突破，乐意接受新技术，并进行学习，如今前端技术日新月异，更需要
-            时时刻刻的提高自己，警醒自己。个人有看书的习惯，市场上基本所有的关于前端的书基本都看过一遍。在未来的工作中，我将
-            以充沛的精力，刻苦专研，努力工作，与企业共同发展
+            追求编程理想，如今javaScript高速发展，从简单的document.write发展到如今和后端分庭抗礼的局面，这是广大前端程序员的福音。而我
+            作为一名前端程序员也必将为这宏伟的建筑添砖加瓦。本人工作刻苦认真，艰苦奋斗，抗压能力强，拥有不达目地誓不罢休的精神。同时也希望
+            贵公司能给我一个机会，共同发展，共同进步。
           </p>
         </Description>
       </div>
-      <div class="bottom">
-        <p class="text">此简历由vue进行构建，项目地址</p>
-      </div>
-      <button class="button" @click='saveAsImage'>Save As Image</button>
     </div>
-    <router-view/>
+    <button class="button" @click='saveAsImage'>Save As Image</button>
   </div>
 </template>
 
@@ -73,10 +91,11 @@ export default {
   name: "App",
   data: function() {
     return {
-      title1: "Working Experience",
-      title2: "Skill",
-      title3: "Education",
-      title4: "Self Evaluation",
+      title1: "工作经历",
+      title2: "个人技能",
+      title3: "教育经历",
+      title4: "自我评价",
+      title5: "校园经历",
       time1: "2017.9 ~ 2017.11",
       time2: "2017.8 ~ 2017.9",
       time3: "2017.6 ~ 至今",
@@ -87,14 +106,14 @@ export default {
         JavaScript: 80
       },
       desc1:
-        "参与学校创新大赛，网站用于制作问卷调查，我负责前端的部分，采用的是vue技术栈，在比赛中获得了" +
-        "优秀作品奖",
+        "和同学一起做过一个仿造饿了么的网络应用，项目人员两个人，前端采用Vue+Webpack+ES6的技术栈，项目结构" +
+        "采用如今流行的前后端分离的设计模式，本人负责前端部分，和同学一起商量接口的设计，数据的获取等等",
       place1: "前端",
       desc2:
-        "关于网络答题的网站制作，我的职责是负责html, css, javaScript的部分，仍然采用的是vue技术栈",
+        "由一个人前端采用Vue全家桶Vue+Vue-Router+Vuex实现数据的获取，数据应用到界面上,后端采用node框架express,实现前后端分离的博客项目",
       place2: "前端",
       desc3:
-        "为掘金翻译计划，翻译国外优秀的文章，这项工作现在仍然在继续，国外优秀文章确实很多，需要我们学习",
+        "为掘金翻译计划翻译国外优秀的文章，这项工作现在仍然在继续，主要专注于前端部分",
       place3: "翻译",
       colors: ["#fde23e", "#f16e23", "#57d9ff", "#937e88"]
     };
@@ -176,7 +195,7 @@ export default {
         .right {
           width: 30%;
           .canvas-container {
-            margin-top: -45px;
+            margin-top: 150px;
           }
         }
       }
